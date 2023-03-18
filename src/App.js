@@ -3,13 +3,13 @@ import { useState } from 'react';
 import React  from 'react';
 import './App.css';
 import Alert from './Components/Alert';
-import About from './Components/About/About';
+// import About from './Components/About/About';
 import Header from './Components/Header/Header';
 import Textarea from './Components/Textarea/Textarea';
-import {
-  BrowserRouter as Router,Routes,
-  Route
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,Routes,
+//   Route
+// } from "react-router-dom";
 
 function App() {
   const [setMode,changeMode]=useState('light')
@@ -50,16 +50,17 @@ function App() {
   
   return (
     <div className='app'>
-    <Router>
+    {/* <Router> */}
     <Header mode={setMode} handleMode={handleMode} btnmode={btnMode} enablemode={modeName} />
     <Alert alertMsg={alert}/>
     <div className='body'>
-    <Routes>
+    <Textarea showAlert={showAlert} bgMode={setMode} textareaBgColor={textareaBgColor} txtMode={btnMode}/>
+    {/* <Routes>
           <Route exact path="/" element={<Textarea showAlert={showAlert} bgMode={setMode} textareaBgColor={textareaBgColor} txtMode={btnMode}/>}/>
           <Route exact path="/about" element={<About />}/>
-    </Routes>
+    </Routes> */}
     </div>
-    </Router>
+    {/* </Router> */}
     </div>
   );
 }

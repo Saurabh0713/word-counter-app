@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
 import './Header.css'
 
 export default function Header(props) {
@@ -24,8 +24,9 @@ export default function Header(props) {
   <div className="container-fluid d-flex justify-content-between">
     <div>
     <span className="navbar-brand mb-0 h1">TEXTUTILS-React</span>
-    <NavLink className="navbar-brand" to="/">Home</NavLink>
-    <NavLink className="navbar-brand" to="/about">About Us</NavLink>
+    <a className="navbar-brand" href="/">Home</a>
+    {/* <NavLink className="navbar-brand" to="/">Home</NavLink> */}
+    {/* <NavLink className="navbar-brand" to="/about">About Us</NavLink> */}
     </div>
   <div className="d-flex">
   <div className="dropdown mx-3">
